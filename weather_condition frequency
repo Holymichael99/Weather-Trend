@@ -21,3 +21,9 @@ plt.xlabel('Count')
 plt.ylabel('Weather Condition')
 plt.title('Weather Condition Frequency')
 plt.show()
+
+# Optional: Save the plot
+# plt.savefig('weather_condition_frequency.png')
+
+# Print the counts
+print(weather_counts)

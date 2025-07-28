@@ -46,3 +46,7 @@ for i, col in enumerate(relevant_columns):
 
 plt.tight_layout()
 plt.show()
+
+# Print summary of anomalies
+for col in relevant_columns:
+    print(f"Number of anomalies in {col}: {df[col + '_anomaly'].sum()}")

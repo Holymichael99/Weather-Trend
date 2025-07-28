@@ -8,3 +8,6 @@ df = pd.read_csv(file_path)
 
 # Display the first few rows to understand the structure
 print(df.head())
+
+# Check for the relevant columns
+print(df.columns)

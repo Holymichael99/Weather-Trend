@@ -57,3 +57,5 @@ plt.show()
 
 # Save the processed dataframe for further analysis
 outputs_dict = {'processed_df': df}
+
+from prophet import Prophet

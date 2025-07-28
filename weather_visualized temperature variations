@@ -52,3 +52,11 @@ plt.title('Temperature by Month')
 plt.xlabel('Month')
 plt.ylabel('Temperature (°C)')
 plt.show()
+
+# Plot temperature variation by season
+plt.figure(figsize=(12, 6))
+sns.boxplot(x='season', y=weather_var, data=df)
+plt.title('Temperature by Season')
+plt.xlabel('Season')
+plt.ylabel('Temperature (°C)')
+plt.show()

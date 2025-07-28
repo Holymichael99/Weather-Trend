@@ -12,3 +12,6 @@ print(df.head())
 
 # Convert 'Date/Time' to datetime
 df['Date/Time'] = pd.to_datetime(df['Date/Time'])
+
+# Set 'Date/Time' as index
+df.set_index('Date/Time', inplace=True)

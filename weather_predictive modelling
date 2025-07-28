@@ -56,3 +56,9 @@ classification_accuracy = accuracy_score(y_test_cls, y_pred_cls)
 # Output evaluation metrics
 print('Regression Mean Squared Error:', regression_mse)
 print('Classification Accuracy:', classification_accuracy)
+
+# Save the trained models
+joblib.dump(regressor, 'weather_regression_model.pkl')
+joblib.dump(classifier, 'weather_classification_model.pkl')
+
+print('Models trained and saved successfully.')

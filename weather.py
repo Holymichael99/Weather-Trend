@@ -59,3 +59,6 @@ plt.show()
 outputs_dict = {'processed_df': df}
 
 from prophet import Prophet
+
+# Resample data to daily frequency for smoother trends
+daily_df = df.resample('D').mean()

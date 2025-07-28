@@ -13,3 +13,11 @@ print(df['Weather'].unique())
 
 # Count occurrences of each weather condition
 weather_counts = df['Weather'].value_counts()
+
+# Plot the frequency of weather conditions
+plt.figure(figsize=(10,6))
+sns.barplot(x=weather_counts.values, y=weather_counts.index, palette='viridis')
+plt.xlabel('Count')
+plt.ylabel('Weather Condition')
+plt.title('Weather Condition Frequency')
+plt.show()

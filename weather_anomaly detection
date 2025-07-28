@@ -22,3 +22,6 @@ relevant_columns = ['Temp_C', 'Press_kPa']
 
 # Calculate z-scores
 z_scores = df[relevant_columns].apply(zscore)
+
+# Set anomaly threshold
+threshold = 3

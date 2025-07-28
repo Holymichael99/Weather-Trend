@@ -10,3 +10,6 @@ print(df.head())
 
 # Check the unique weather conditions
 print(df['Weather'].unique())
+
+# Count occurrences of each weather condition
+weather_counts = df['Weather'].value_counts()

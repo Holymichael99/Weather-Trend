@@ -14,6 +14,7 @@ print(df.columns)
 
 
 
+
 # Calculate correlation matrix for temperature with other variables
 correlation_matrix = df[['Temp_C', 'Rel Hum_%', 'Wind Speed_km/h', 'Press_kPa']].corr()
 

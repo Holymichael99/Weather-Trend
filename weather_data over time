@@ -15,3 +15,8 @@ if 'Date/Time' in df.columns:
 else:
     print('No Date/Time column found.')
     exit()
+
+    # Extract hour, day, month
+df['hour'] = df['date'].dt.hour
+df['day'] = df['date'].dt.dayofweek  # 0=Monday
+df['month'] = df['date'].dt.month

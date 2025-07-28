@@ -13,3 +13,6 @@ df['Date/Time'] = pd.to_datetime(df['Date/Time'], format='%m/%d/%Y %H:%M')
 
 # Display the first few rows
 print(df.head())
+
+# Check for missing values
+print(df.isnull().sum())

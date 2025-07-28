@@ -54,3 +54,6 @@ plt.show()
 # Seasonality detection: autocorrelation plot for temperature
 autocorrelation_plot(df['Temp_C'])
 plt.show()
+
+# Save the processed dataframe for further analysis
+outputs_dict = {'processed_df': df}

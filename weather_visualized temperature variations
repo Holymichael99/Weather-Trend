@@ -44,3 +44,11 @@ plt.title('Temperature by Day of Week')
 plt.xlabel('Day of Week (0 = Monday)')
 plt.ylabel('Temperature (°C)')
 plt.show()
+
+# Plot temperature variation by month
+plt.figure(figsize=(12, 6))
+sns.boxplot(x='month', y=weather_var, data=df)
+plt.title('Temperature by Month')
+plt.xlabel('Month')
+plt.ylabel('Temperature (°C)')
+plt.show()

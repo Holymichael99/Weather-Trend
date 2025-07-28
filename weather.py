@@ -84,4 +84,17 @@ def forecast_time_series(series, model_type='ARIMA', steps=7):
         return forecast[['ds', 'yhat']].tail(steps)
     else:
         raise ValueError('Unsupported model type')
+    
 
+
+# Forecast Temperature
+temp_series = daily_df['Temp_C'].dropna()
+temp_forecast, temp_ci = forecast_time_series(temp_series, 'ARIMA')
+
+# Forecast Humidity
+hum_series = daily_df['Rel Hum_%'].dropna()
+hum_forecast, hum_ci = forecast_time_series(hum_series, 'ARIMA')
+
+# Forecast Pressure
+press_series = daily_df['Press_kPa'].dropna()
+press_forecast, press_ci = forecast_time_series(press_series, 'ARIMA')

@@ -98,3 +98,33 @@ hum_forecast, hum_ci = forecast_time_series(hum_series, 'ARIMA')
 # Forecast Pressure
 press_series = daily_df['Press_kPa'].dropna()
 press_forecast, press_ci = forecast_time_series(press_series, 'ARIMA')
+
+# Plotting the forecasts
+plt.figure(figsize=(15, 10))
+
+# Temperature
+plt.subplot(3, 1, 1)
+plt.plot(temp_series.index, temp_series, label='Actual Temp')
+plt.plot(temp_series.index[-1] + pd.to_timedelta(range(1,8), 'D'), temp_forecast, label='Forecast Temp')
+plt.fill_between(temp_series.index[-1] + pd.to_timedelta(range(1,8), 'D'), temp_ci.iloc[:, 0], temp_ci.iloc[:, 1], color='pink', alpha=0.3)
+plt.title('Temperature Forecast')
+plt.legend()
+
+# Humidity
+plt.subplot(3, 1, 2)
+plt.plot(hum_series.index, hum_series, label='Actual Humidity')
+plt.plot(hum_series.index[-1] + pd.to_timedelta(range(1,8), 'D'), hum_forecast, label='Forecast Humidity')
+plt.fill_between(hum_series.index[-1] + pd.to_timedelta(range(1,8), 'D'), hum_ci.iloc[:, 0], hum_ci.iloc[:, 1], color='lightblue', alpha=0.3)
+plt.title('Humidity Forecast')
+plt.legend()
+
+# Pressure
+plt.subplot(3, 1, 3)
+plt.plot(press_series.index, press_series, label='Actual Pressure')
+plt.plot(press_series.index[-1] + pd.to_timedelta(range(1,8), 'D'), press_forecast, label='Forecast Pressure')
+plt.fill_between(press_series.index[-1] + pd.to_timedelta(range(1,8), 'D'), press_ci.iloc[:, 0], press_ci.iloc[:, 1], color='lightgreen', alpha=0.3)
+plt.title('Pressure Forecast')
+plt.legend()
+
+plt.tight_layout()
+plt.show()

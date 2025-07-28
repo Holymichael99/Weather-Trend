@@ -19,3 +19,6 @@ print(df.isnull().sum())
 
 # Select relevant columns for anomaly detection
 relevant_columns = ['Temp_C', 'Press_kPa']
+
+# Calculate z-scores
+z_scores = df[relevant_columns].apply(zscore)

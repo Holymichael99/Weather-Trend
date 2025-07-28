@@ -39,3 +39,14 @@ plt.title('Wind Speed Over Time')
 plt.xlabel('Time')
 plt.ylabel('Wind Speed (km/h)')
 plt.show()
+
+# Seasonal plot: average temperature by month
+df['Month'] = df.index.month
+monthly_avg_temp = df.groupby('Month')['Temp_C'].mean()
+
+plt.figure(figsize=(8, 4))
+sns.barplot(x=monthly_avg_temp.index, y=monthly_avg_temp.values)
+plt.title('Average Temperature by Month')
+plt.xlabel('Month')
+plt.ylabel('Average Temperature (C)')
+plt.show()

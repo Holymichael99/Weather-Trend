@@ -33,3 +33,6 @@ def get_season(month):
         return 'Fall'
 
 df['season'] = df['month'].apply(get_season)
+
+# Choose weather variable (e.g., Temp_C)
+weather_var = 'Temp_C'

@@ -28,3 +28,7 @@ X = df.drop(columns=['Temp_C', 'Weather'])  # Features
 
 y_regression = df['Temp_C']     # Target for regression
 y_classification = df['Weather']  # Target for classification
+
+# Split data for regression
+X_train_reg, X_test_reg, y_train_reg, y_test_reg = train_test_split(
+    X, y_regression, test_size=0.2, random_state=42)

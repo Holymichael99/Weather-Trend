@@ -28,3 +28,11 @@ df['season'] = df['month'].apply(get_season)
 
 # Set the weather variable to analyze
 weather_var = 'Temp_C'
+
+# Plot temperature variation by hour
+plt.figure(figsize=(12, 6))
+sns.boxplot(x='hour', y=weather_var, data=df)
+plt.title('Temperature by Hour of Day')
+plt.xlabel('Hour of Day')
+plt.ylabel('Temperature (°C)')
+plt.show()

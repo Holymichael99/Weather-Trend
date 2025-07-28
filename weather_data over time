@@ -52,3 +52,11 @@ plt.title(f'{weather_var} by Day of Week')
 plt.xlabel('Day of Week')
 plt.ylabel(weather_var)
 plt.show()
+
+# Plot by month
+plt.figure(figsize=(12, 6))
+sns.boxplot(x='month', y=weather_var, data=df)
+plt.title(f'{weather_var} by Month')
+plt.xlabel('Month')
+plt.ylabel(weather_var)
+plt.show()

@@ -31,3 +31,11 @@ plt.title('Relative Humidity Over Time')
 plt.xlabel('Time')
 plt.ylabel('Relative Humidity (%)')
 plt.show()
+
+# Plot wind speed over time
+plt.figure(figsize=(12, 6))
+sns.lineplot(data=df, x=df.index, y='Wind Speed_km/h')
+plt.title('Wind Speed Over Time')
+plt.xlabel('Time')
+plt.ylabel('Wind Speed (km/h)')
+plt.show()

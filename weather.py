@@ -2,6 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pandas.plotting import autocorrelation_plot
+from prophet import Prophet
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
 
 # Load the CSV file
 file_path = 'file.csv'
@@ -58,7 +61,6 @@ plt.show()
 # Save the processed dataframe for further analysis
 outputs_dict = {'processed_df': df}
 
-from prophet import Prophet
 
 # Resample data to daily frequency for smoother trends
 daily_df = df.resample('D').mean()

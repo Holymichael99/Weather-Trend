@@ -9,3 +9,6 @@ df = pd.read_csv(file_path, encoding='ascii')
 
 # Display the first few rows to understand the structure
 print(df.head())
+
+# Convert 'Date/Time' to datetime
+df['Date/Time'] = pd.to_datetime(df['Date/Time'])

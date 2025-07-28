@@ -18,3 +18,9 @@ print(df.columns)
 # Calculate correlation matrix for temperature with other variables
 correlation_matrix = df[['temperature', 'humidity', 'wind_speed', 'pressure']].corr()
 print(correlation_matrix)
+
+# Plot heatmap of correlations
+plt.figure(figsize=(8, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix of Weather Variables')
+plt.show()

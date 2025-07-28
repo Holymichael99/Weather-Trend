@@ -11,3 +11,10 @@ print(df.head())
 
 # Check for the relevant columns
 print(df.columns)
+
+# Assuming the relevant columns are named 'temperature', 'humidity', 'wind_speed', 'pressure'
+# If the column names are different, please specify or adjust accordingly.
+
+# Calculate correlation matrix for temperature with other variables
+correlation_matrix = df[['temperature', 'humidity', 'wind_speed', 'pressure']].corr()
+print(correlation_matrix)

@@ -23,3 +23,11 @@ plt.title('Temperature Over Time')
 plt.xlabel('Time')
 plt.ylabel('Temperature (C)')
 plt.show()
+
+# Plot humidity over time
+plt.figure(figsize=(12, 6))
+sns.lineplot(data=df, x=df.index, y='Rel Hum_%')
+plt.title('Relative Humidity Over Time')
+plt.xlabel('Time')
+plt.ylabel('Relative Humidity (%)')
+plt.show()

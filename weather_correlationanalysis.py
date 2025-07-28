@@ -24,3 +24,13 @@ plt.figure(figsize=(8, 6))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
 plt.title('Correlation Matrix of Weather Variables')
 plt.show()
+
+# Scatter plots to visualize relationships
+variables = ['humidity', 'wind_speed', 'pressure']
+for var in variables:
+    plt.figure(figsize=(6, 4))
+    sns.scatterplot(x=df['temperature'], y=df[var])
+    plt.title('Temperature vs ' + var)
+    plt.xlabel('Temperature')
+    plt.ylabel(var)
+    plt.show()

@@ -7,3 +7,8 @@ df = pd.read_csv('file.csv')
 
 # Convert 'Date/Time' to datetime with proper format
 df['Date/Time'] = pd.to_datetime(df['Date/Time'], format='%m/%d/%Y %H:%M')
+
+# Extract time components
+df['hour'] = df['Date/Time'].dt.hour
+df['day'] = df['Date/Time'].dt.dayofweek  # 0 = Monday
+df['month'] = df['Date/Time'].dt.month

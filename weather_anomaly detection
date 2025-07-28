@@ -16,3 +16,6 @@ print(df.head())
 
 # Check for missing values
 print(df.isnull().sum())
+
+# Select relevant columns for anomaly detection
+relevant_columns = ['Temp_C', 'Press_kPa']

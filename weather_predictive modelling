@@ -15,3 +15,10 @@ df = df.drop(columns=['Date/Time'])
 
 # Drop rows with missing values (you can use imputation if preferred)
 df = df.dropna()
+
+# Encode categorical features (specifically 'Weather')
+label_encoders = {}
+for column in df.select_dtypes(include=['object']).columns:
+    le = LabelEncoder()
+    df[column] = le.fit_transform(df[column])
+    label_encoders[column] = le

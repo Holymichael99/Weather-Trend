@@ -36,3 +36,11 @@ plt.title('Temperature by Hour of Day')
 plt.xlabel('Hour of Day')
 plt.ylabel('Temperature (°C)')
 plt.show()
+
+# Plot temperature variation by day of week
+plt.figure(figsize=(12, 6))
+sns.boxplot(x='day', y=weather_var, data=df)
+plt.title('Temperature by Day of Week')
+plt.xlabel('Day of Week (0 = Monday)')
+plt.ylabel('Temperature (°C)')
+plt.show()

@@ -28,3 +28,7 @@ threshold = 3
 
 # Identify anomalies
 anomalies = (np.abs(z_scores) > threshold)
+
+# Add anomaly flags to the DataFrame
+for col in relevant_columns:
+    df[col + '_anomaly'] = anomalies[col]

@@ -12,3 +12,6 @@ df = pd.read_csv('file.csv', encoding='ascii')
 
 # Drop 'Date/Time' column since it's not directly usable
 df = df.drop(columns=['Date/Time'])
+
+# Drop rows with missing values (you can use imputation if preferred)
+df = df.dropna()

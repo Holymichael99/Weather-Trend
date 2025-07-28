@@ -7,3 +7,11 @@ df = pd.read_csv('file.csv')
 
 # Display the first few rows
 print(df.head())
+
+# Handle the date/time column
+if 'Date/Time' in df.columns:
+    df['Date/Time'] = pd.to_datetime(df['Date/Time'])
+    df['date'] = df['Date/Time']  # Create a working alias
+else:
+    print('No Date/Time column found.')
+    exit()

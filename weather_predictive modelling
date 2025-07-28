@@ -52,3 +52,7 @@ classifier.fit(X_train_cls, y_train_cls)
 # Predict and evaluate classification
 y_pred_cls = classifier.predict(X_test_cls)
 classification_accuracy = accuracy_score(y_test_cls, y_pred_cls)
+
+# Output evaluation metrics
+print('Regression Mean Squared Error:', regression_mse)
+print('Classification Accuracy:', classification_accuracy)

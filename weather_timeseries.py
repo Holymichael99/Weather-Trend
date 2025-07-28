@@ -75,3 +75,7 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
+
+# Forecasting with Prophet for comparison
+prophet_temp = forecast_time_series(prophet_df['y'], 'Prophet', steps=7)
+print('Temperature forecast with Prophet:', prophet_temp)

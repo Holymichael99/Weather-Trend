@@ -25,3 +25,6 @@ z_scores = df[relevant_columns].apply(zscore)
 
 # Set anomaly threshold
 threshold = 3
+
+# Identify anomalies
+anomalies = (np.abs(z_scores) > threshold)

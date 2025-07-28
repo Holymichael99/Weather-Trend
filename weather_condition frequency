@@ -7,3 +7,6 @@ df = pd.read_csv('file.csv', encoding='ascii')
 
 Inspect the first few rows to understand the structure
 print(df.head())
+
+# Check the unique weather conditions
+print(df['Weather'].unique())

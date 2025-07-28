@@ -40,3 +40,7 @@ X_train_cls, X_test_cls, y_train_cls, y_test_cls = train_test_split(
 # Train regression model
 regressor = LinearRegression()
 regressor.fit(X_train_reg, y_train_reg)
+
+# Predict and evaluate regression
+y_pred_reg = regressor.predict(X_test_reg)
+regression_mse = mean_squared_error(y_test_reg, y_pred_reg)

@@ -32,3 +32,17 @@ anomalies = (np.abs(z_scores) > threshold)
 # Add anomaly flags to the DataFrame
 for col in relevant_columns:
     df[col + '_anomaly'] = anomalies[col]
+
+    # Plot anomalies
+plt.figure(figsize=(15, 6))
+for i, col in enumerate(relevant_columns):
+    plt.subplot(1, 2, i + 1)
+    plt.plot(df['Date/Time'], df[col], label=col, color='blue')
+    plt.scatter(df['Date/Time'][df[col + '_anomaly']], df[col][df[col + '_anomaly']], color='red', label='Anomaly')
+    plt.xlabel('Date/Time')
+    plt.ylabel(col)
+    plt.title(f'Anomaly Detection in {col}')
+    plt.legend()
+
+plt.tight_layout()
+plt.show()

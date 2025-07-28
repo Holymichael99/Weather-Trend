@@ -62,3 +62,7 @@ from prophet import Prophet
 
 # Resample data to daily frequency for smoother trends
 daily_df = df.resample('D').mean()
+
+# Prepare data for Prophet
+prophet_df = daily_df.reset_index()
+prophet_df.columns = ['ds', 'y']

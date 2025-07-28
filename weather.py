@@ -50,3 +50,7 @@ plt.title('Average Temperature by Month')
 plt.xlabel('Month')
 plt.ylabel('Average Temperature (C)')
 plt.show()
+
+# Seasonality detection: autocorrelation plot for temperature
+autocorrelation_plot(df['Temp_C'])
+plt.show()

@@ -22,3 +22,9 @@ for column in df.select_dtypes(include=['object']).columns:
     le = LabelEncoder()
     df[column] = le.fit_transform(df[column])
     label_encoders[column] = le
+
+    # Define features and targets
+X = df.drop(columns=['Temp_C', 'Weather'])  # Features
+
+y_regression = df['Temp_C']     # Target for regression
+y_classification = df['Weather']  # Target for classification

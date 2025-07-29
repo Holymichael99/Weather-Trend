@@ -29,7 +29,8 @@ To explore the structure, identify patterns, and visualize temporal trends in ke
 - Monthly average temperatures confirm seasonal variation.
 - Autocorrelation reveals repeating seasonal trends.
 
-![alt text](<Screenshot 2025-07-29 142006.png>)  
+<img width="1177" height="626" alt="Screenshot 2025-07-29 142006" src="https://github.com/user-attachments/assets/1adf5e18-380d-45a5-a8e8-c8e25668f357" />
+ 
  Temperature Over Time
 What it shows:
 This line plot depicts the variation of temperature across the entire year of 2012. You can clearly observe the seasonal progression—temperatures increase from January to a summer peak around July, then decline through to December.
@@ -42,7 +43,8 @@ Daily variability: Sharp, frequent fluctuations suggest diurnal temperature chan
 
 Useful for: Time series modeling and forecasting, especially with seasonally aware models like Prophet.
 
-![alt text](<Screenshot 2025-07-29 142016.png>)
+<img width="1156" height="624" alt="Screenshot 2025-07-29 142016" src="https://github.com/user-attachments/assets/444ea34b-8cb6-4c58-a95c-1810b8e4d3e0" />
+
 Relative Humidity Over Time
 What it shows:
 This time series plot represents relative humidity (%) over time in 2012. It demonstrates the frequency and spread of humidity across seasons.
@@ -55,7 +57,8 @@ High variability: Frequent spikes and drops, which may be due to precipitation e
 
 Connection to temperature: Often shows a negative correlation—as temperature rises, humidity drops, and vice versa.
 
-![alt text](<Screenshot 2025-07-29 142023.png>)
+<img width="1175" height="628" alt="Screenshot 2025-07-29 142023" src="https://github.com/user-attachments/assets/eb6dd13e-540f-48b3-908d-e900c925dc04" />
+
 Wind Speed Over Time
 What it shows:
 This graph presents the wind speed in km/h throughout the year.
@@ -68,7 +71,8 @@ Spikes: Occasional high wind events are visible, suggesting possible storms or c
 
 Low seasonal trend: Unlike temperature, wind speed doesn’t show strong seasonality but is important for understanding energy demand or hazard forecasting.
 
-![alt text](<Screenshot 2025-07-29 142033.png>)
+<img width="783" height="452" alt="Screenshot 2025-07-29 142033" src="https://github.com/user-attachments/assets/6cab0c9d-8419-4c58-a4cf-8b080f7e0a07" />
+
  Average Temperature by Month
 What it shows:
 This bar chart aggregates average temperatures by month, giving a cleaner view of seasonal temperature trends.
@@ -83,7 +87,8 @@ Smooth seasonal transition: Reflects a typical temperate climate with distinct s
 
 Great for summarizing seasonality for stakeholders or decision-makers.
 
-![alt text](<Screenshot 2025-07-29 142041.png>)
+<img width="626" height="499" alt="Screenshot 2025-07-29 142041" src="https://github.com/user-attachments/assets/5e62addc-d7b0-4216-a873-05eb4c275058" />
+
  Autocorrelation Plot
 What it shows:
 This plot measures the correlation of the temperature series with itself at different lags—essentially asking: "How predictable is the temperature based on previous values?"

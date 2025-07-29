@@ -594,7 +594,7 @@ To train regression and classification models on historical data.
 
 ## Project Status
 
-✅ Complete — Models and insights validated. Ready for presentation, reporting, or deployment.
+ Complete — Models and insights validated. Ready for presentation, reporting, or deployment.
 
 ## Author
 

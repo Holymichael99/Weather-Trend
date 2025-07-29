@@ -517,6 +517,67 @@ To forecast weather variables using ARIMA and Prophet models.
 - Prophet confirms seasonal strength.
 - Provides 7-day forecasts with confidence intervals.
 
+- <img width="1478" height="962" alt="Screenshot 2025-07-29 153900" src="https://github.com/user-attachments/assets/135ab0d3-8adb-4771-8b03-7f26fc9bc90c" />
+Time Series Forecasting of Weather Variables
+This figure presents 7-day ahead forecasts of three key weather variables — Temperature, Humidity, and Pressure — using historical data from 2012. The forecasting method employed here is the ARIMA (AutoRegressive Integrated Moving Average) model, which is commonly used for time series prediction due to its ability to capture temporal structure.
+
+The forecast includes:
+
+Actual observed data in blue
+
+Forecasted values in color (red for temperature, green for humidity, orange for pressure)
+
+Confidence intervals (CI) as shaded regions, showing the range of uncertainty around the predictions
+
+1. Temperature Forecast (Top Plot)
+The blue line represents daily average temperature throughout 2012.
+
+Toward the end of the year, a 7-day forecast is shown in red.
+
+The pink shaded area represents the 95% confidence interval of the forecast.
+
+Insights:
+
+The model accurately captures the seasonal trend, showing warmer temperatures in the middle of the year (summer) and a cooling trend toward December.
+
+The forecast suggests that temperature is expected to remain relatively stable or slightly decrease in early January.
+
+The confidence interval is reasonably narrow, indicating good model confidence.
+
+2. Humidity Forecast (Middle Plot)
+The blue line shows historical relative humidity (%).
+
+The green segment at the end represents the 7-day forecast.
+
+The light blue shaded region shows the forecast uncertainty.
+
+Insights:
+
+Humidity levels appear to fluctuate frequently, lacking a strong seasonal trend.
+
+The ARIMA model captures the short-term oscillatory nature of humidity.
+
+The confidence interval is slightly wider, indicating more variability and uncertainty in predicting humidity.
+
+ 3. Pressure Forecast (Bottom Plot)
+The blue line represents atmospheric pressure (in kPa).
+
+The orange line shows the 7-day forecast.
+
+The green shaded band represents the prediction interval.
+
+Insights:
+
+Atmospheric pressure shows less pronounced trends but some periodic variation.
+
+The model predicts a modest rise in pressure over the forecast period.
+
+The confidence band is tight, indicating that the model is relatively confident in its short-term pressure predictions.
+
+ Summary on Time Series Analysis:
+These plots demonstrate the effectiveness of time series models like ARIMA in forecasting short-term weather variables. While temperature and pressure show strong seasonal or stable patterns, humidity appears more erratic. The forecasts are enhanced by confidence intervals, which convey uncertainty — a critical feature for weather applications. These insights can be used in climate-aware decision-making, event planning, or early warning systems.
+
+
 ---
 
 ## 8. Predictive Modeling with Machine Learning
